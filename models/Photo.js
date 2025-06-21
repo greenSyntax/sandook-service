@@ -4,6 +4,7 @@ const photoSchema = new mongoose.Schema({
   url: { type: String, required: true },
   originalName: String,
   uploadedName: String,
+  imageHash: String,
   size: Number,
   mimeType: String,
   extension: String,

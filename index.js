@@ -87,6 +87,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             url: fileUrl,
             originalName: req.file.originalname,
             uploadedName: fileName,
+            imageHash: req.body.imageHash,
             size: req.file.size,
             mimeType: req.file.mimetype,
             extension: fileExt,
@@ -101,6 +102,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             metadata: {
                 originalName: req.file.originalname,
                 uploadedName: fileName,
+                imageHash: req.body.imageHash,
                 size: req.file.size,                // in bytes
                 mimeType: req.file.mimetype,
                 extension: fileExt,
